@@ -21,3 +21,7 @@ This repo aims to solve this situation with three-step approach:
 1. Write wasm memory functions that can be linked to
 2. Craft out a custom linker that has multi-memory knowledge (`secundus-ld`)
 3. Make a Rusty and ergonomic interface for using those functions
+
+## Ceveat
+
+Currently, `WebAssembly.Memory` can only be attach at instantiation and cannot be dynamically attached/detached/mmaped at runtime. This limits the usage of multi-memory feature. Proposals like [WebAssembly/design#1555](https://github.com/WebAssembly/design/issues/1555) may solve this issue.
